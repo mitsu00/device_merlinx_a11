@@ -35,16 +35,21 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_system_ext.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 
+TARGET_DISABLE_EPPE := true
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := merlinx
 PRODUCT_NAME := lineage_merlinx
-PRODUCT_BRAND := Redmi
+PRODUCT_DEVICE := merlinx
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := Redmi Note 9
+BOARD_VENDOR := Xiaomi
+
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-TARGET_VENDOR := xiaomi
+TARGET_VENDOR := Xiaomi
 TARGET_VENDOR_PRODUCT_NAME := merlinx
-PRODUCT_BUILD_PROP_OVERRIDES += PRIVATE_BUILD_DESC="merlin-user 11 RP1A.200720.011 V12.0.1.0.RJOMIXM release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="merlin-user 11 RP1A.200720.011 V12.5.4.0.RJOMIXM release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := Redmi/merlin/merlin:11/RP1A.200720.011/V12.0.1.0.RJOMIXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/merlin/merlin:11/RP1A.200720.011/V12.5.4.0.RJOMIXM:user/release-keys
